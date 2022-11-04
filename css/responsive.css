@@ -1,0 +1,10 @@
+@media (max-width:27rem) {
+    .container{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .author{
+        font-size: 1.6rem;
+    }
+    
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="./assests/icons8-quizlet-16.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+    <title>Quiz App</title>
+</head>
+<body>
+    <div class="notification">
+        You haven't chosen any answer yet!
+    </div>
+    
+    <div class="container">
+        <div class="quiz-header">
+            <p class="question-num"></p>
+            <p class="question-content"> </p>
+            <p class="countdown"></p>
+
+            <ul class="answers">
+                <li class="answer">
+                    <input  type="radio" class="answer-input" name="answer" id="a">
+                    <label class="answer--content" id="answerLabelA" for="a"></label>
+                </li>
+                <li class="answer">
+                    <input type="radio" class="answer-input" name="answer" id="b">
+                    <label class="answer--content " id="answerLabelB" for="b"></label>
+                </li>
+                <li class="answer">
+                    <input type="radio" class="answer-input" name="answer" id="c">
+                    <label class="answer--content" id="answerLabelC" for="c"></label>
+                </li>
+                <li class="answer">
+                    <input type="radio" class="answer-input" name="answer" id="d">
+                    <label class="answer--content " id="answerLabelD" for="d"></label>
+                </li>
+            </ul>
+
+        </div>
+       <div class="result">
+        <p class="result-title">Your score is</p>
+        <p class='result-text'></p>
+       </div>
+        <button class="submit-button">Submit</button>
+    </div>
+    <div class="author">Developed:Nam Phan</div>
+   
+    <script type="module" src="./src/quizz.js"></script>
+    <script type="module" src="./src/data.js"></script>
+    
+</body>
+</html>
