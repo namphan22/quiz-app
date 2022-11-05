@@ -169,7 +169,9 @@ function showFinalResult(){
 
 
 loadQuestion(question[0]);
-countdownGenerate();
+// countdownGenerate();
+setTimeout(countdownGenerate,5000);
+
 
 btnSubmit.addEventListener('click',handleClickSubmitButton);
 
