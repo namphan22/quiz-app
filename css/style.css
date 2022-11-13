@@ -142,4 +142,6 @@ body{
 .countdown{
     font-size: 1.4rem;
     font-weight: 600;
+    /* margin-top: 0.6rem; */
+    transition: all 0.2s;
 }

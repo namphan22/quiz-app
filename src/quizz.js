@@ -75,7 +75,7 @@ function checkAnswer(){
         document.getElementById(answer).labels[0].classList.add('answer--correct');
         // set notification for success answer
         // console.log(answer);
-        console.log('Bạn đã trả lời chính xác rồi nha !');
+        // console.log('Bạn đã trả lời chính xác rồi nha !');
         setNotification('Bạn đã trả lời chính xác rồi nha !');
     }
     else{
@@ -112,14 +112,18 @@ function setNotification(message){
 }
 let downloadTimer=null;
 function countdownGenerate(){
-let timeleft = 10;
+let timeleft = 15;
  downloadTimer = setInterval(()=>{
+    countdownTimer.style.transition="all 0.2s";
     if(timeleft<=0){
         clearInterval(downloadTimer);
         countdownTimer.innerHTML = `Finished`;
     }
-    else{
+    else{   
         countdownTimer.innerHTML = `${timeleft} seconds remaining`;
+        // countdownTimer.innerHTML = `${timeleft}`;
+        // countdownTimer.innerHTML = `${timeleft}`;
+        
     }
     timeleft--;
 },1000);
@@ -156,6 +160,9 @@ function handleClickSubmitButton(){
         changeButtonText('Submit');
         disabledSelectedAnswer(false);
         loadQuestion(question[currentQuestion]);
+        countdownTimer.style.transition="all 0.2s";
+        countdownTimer.textContent =''; 
+       
         countdownGenerate();
 
     }
@@ -170,9 +177,12 @@ function showFinalResult(){
 
 loadQuestion(question[0]);
 // countdownGenerate();
-setTimeout(countdownGenerate,5000);
+countdownTimer.innerHTML = '';
+setTimeout(countdownGenerate,3000);
 
-
+// window.addEventListener('click',()=>{
+//     setTimeout(countdownGenerate,1000);
+// })
 btnSubmit.addEventListener('click',handleClickSubmitButton);
 
 
